@@ -69,3 +69,23 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("classBody").addEventListener("click",e=>{if(e.target.classList.contains("view-class"))toast("Detalhes da turma selecionada.");});
   }
 });
+const campusSelect = document.getElementById("campusSelect");
+
+if (campusSelect) {
+
+    campusSelect.addEventListener("change", () => {
+
+        const campusNames = {
+            "spp": "São Paulo do Potengi",
+            "santa-cruz": "Santa Cruz",
+            "natal": "Natal",
+            "zona-norte": "Zona Norte"
+        };
+
+        const campus = campusNames[campusSelect.value];
+
+        toast(`Campus alterado para ${campus}.`);
+
+    });
+
+}

@@ -110,3 +110,122 @@ button,input,select{font:inherit}
 @media(max-width:1100px){.sidebar{width:215px}.main{margin-left:215px}.quick-actions{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:800px){.login-shell{grid-template-columns:1fr}.login-brand{min-height:280px;padding:40px}.login-area{padding:38px 25px}.sidebar{position:static;width:100%;min-height:auto}.main{margin-left:0}.sidebar-nav{display:grid;grid-template-columns:repeat(2,1fr)}.logout{margin-top:10px}.topbar{padding:0 18px}.content{padding:25px 18px 45px}.quick-actions{grid-template-columns:1fr 1fr}.page-heading{flex-direction:column}.semester{width:100%;text-align:left}}
 @media(max-width:520px){.quick-actions{grid-template-columns:1fr}.topbar .campus{max-width:220px}.page-heading h1{font-size:22px}}
+/* =========================
+   SELECT DO CAMPUS
+   ========================= */
+
+.campus {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #52635b;
+}
+
+.campus > i {
+    color: #0a8b61;
+    font-size: 16px;
+}
+
+.campus-select {
+    border: 1px solid #e1ebe6;
+    background: #f7fbf8;
+    color: #07553e;
+    border-radius: 10px;
+    padding: 8px 34px 8px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 205px;
+    cursor: pointer;
+    outline: none;
+    transition: all .2s ease;
+}
+
+.campus-select:hover {
+    border-color: #9bcdb7;
+    background: #eef9f3;
+}
+
+.campus-select:focus {
+    border-color: #0a8b61;
+    box-shadow: 0 0 0 3px rgba(10, 139, 97, .10);
+}
+
+
+/* =========================
+   LOGO DA LATERAL
+   ========================= */
+
+.logo {
+    color: #9bd8bb !important;
+    transition: .2s ease;
+}
+
+.logo:hover {
+    color: #b8e7cf !important;
+}
+
+.logo small {
+    color: rgba(255, 255, 255, .68);
+}
+
+
+/* =========================
+   ÍCONES DA NAVEGAÇÃO
+   ========================= */
+
+.sidebar-nav a i,
+.logout i {
+    color: #9bd8bb;
+    transition: .2s ease;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+    background: rgba(155, 216, 187, .13);
+    color: #ffffff;
+}
+
+.sidebar-nav a:hover i,
+.sidebar-nav a.active i {
+    color: #b8e7cf;
+}
+
+
+/* =========================
+   BOTÃO SAIR
+   ========================= */
+
+.logout:hover {
+    background: rgba(155, 216, 187, .10);
+    color: #ffffff;
+}
+
+.logout:hover i {
+    color: #b8e7cf;
+}
+
+
+/* =========================
+   TOPBAR
+   ========================= */
+
+.top-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: #728078;
+}
+
+.icon-btn:hover {
+    color: #0a8b61;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #e2f3e9;
+    color: #087653;
+}
