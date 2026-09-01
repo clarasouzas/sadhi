@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Entrar | SADHI</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body class="login-page"><div class="login-shell">
+<section class="login-brand"><div class="brand-mark">SADHI</div><div class="brand-copy">Sistema de Apoio à Decisão de Horários. Uma interface mais simples para organizar grades, horários, turmas e informações acadêmicas.</div><div class="brand-badge"><i class="bi bi-shield-check"></i> Ambiente institucional</div></section>
+<section class="login-area"><form id="loginForm" class="login-form">
+<h1>Acesse sua conta</h1><p class="muted">Entre para continuar no SADHI.</p>
+<label class="form-label fw-semibold">Usuário</label><div class="input-wrap mb-3"><i class="bi bi-person"></i><input required class="form-control" placeholder="Digite seu usuário"></div>
+<label class="form-label fw-semibold">Senha</label><div class="input-wrap"><i class="bi bi-lock"></i><input id="password" required type="password" class="form-control" placeholder="Digite sua senha"><button type="button" class="eye-btn" id="togglePassword"><i class="bi bi-eye"></i></button></div>
+<button class="btn btn-success login-submit" type="submit"><i class="bi bi-box-arrow-in-right me-2"></i>Entrar</button>
+<div class="divider"><span>ou</span></div><button type="button" id="suapBtn" class="btn suap"><strong>suap</strong>&nbsp; Entrar com SUAP</button>
+<a href="#" id="forgot" class="forgot">Esqueceu sua senha?</a>
+</form></section></div>
+<div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="loginToast" class="toast"><div class="toast-body"></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="script.js"></script></body></html>

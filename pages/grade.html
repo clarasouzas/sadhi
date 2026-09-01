@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grade Horária | SADHI</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="../style.css"></head>
+<body><div class="app">
+<aside class="sidebar">
+  <a class="logo" href="dashboard.html">SADHI<small>Sistema de Apoio à<br>Decisão de Horários</small></a>
+  <div class="nav-title">Menu principal</div><nav class="sidebar-nav"><a href="dashboard.html" class=""><i class="bi bi-house-door"></i>Início</a>
+<a href="grade.html" class="active"><i class="bi bi-calendar3"></i>Grade Horária</a>
+<a href="horarios.html" class=""><i class="bi bi-clock-history"></i>Horários</a>
+<a href="disciplinas.html" class=""><i class="bi bi-book"></i>Disciplinas</a>
+<a href="turmas.html" class=""><i class="bi bi-people"></i>Turmas</a>
+<a href="historico.html" class=""><i class="bi bi-bar-chart"></i>Relatórios</a></nav>
+  <a class="logout" href="../index.html"><i class="bi bi-box-arrow-left"></i>Sair</a>
+</aside>
+<main class="main"><header class="topbar">
+  <span class="campus"><i class="bi bi-building me-2"></i>Campus: São Paulo do Potengi</span>
+  <div class="top-actions"><button class="icon-btn" data-bs-toggle="tooltip" title="Notificações"><i class="bi bi-bell"></i></button><button class="icon-btn" data-bs-toggle="modal" data-bs-target="#helpModal" title="Ajuda"><i class="bi bi-question-circle"></i></button><span class="avatar"><i class="bi bi-person"></i></span></div>
+</header><div class="content">
+<div class="page-heading"><div><h1>Grade Horária</h1><p>Selecione o semestre para trabalhar com a grade acadêmica.</p></div><div class="semester"><small>Semestre atual</small><strong>2026.1</strong></div></div>
+<div class="row justify-content-center"><div class="col-lg-7 col-xl-6"><div class="card-soft p-4 p-md-5 text-center"><div class="feature-icon mx-auto mb-3"><i class="bi bi-calendar3"></i></div><h2 class="fs-5 fw-bold">Seleção de semestre letivo</h2><p class="text-secondary small mb-4">Escolha o período que deseja consultar ou editar.</p><label class="d-block text-start small fw-bold mb-2">Semestre letivo</label><select id="semesterSelect" class="form-select mb-3"><option>2026.1</option><option>2025.2</option><option>2025.1</option><option>2024.2</option></select><div class="d-flex gap-2 justify-content-center"><button id="selectSemester" class="btn btn-success"><i class="bi bi-check-lg me-1"></i>Selecionar</button><button id="clearSemester" class="btn btn-outline-secondary"><i class="bi bi-arrow-counterclockwise me-1"></i>Limpar</button></div></div>
+<div class="alert mt-3 border-0" style="background:var(--green-100);color:var(--green-900)"><i class="bi bi-info-circle me-2"></i>Depois de selecionar, consulte a elaboração de horários ou os relatórios.</div></div></div>
+</div></main></div>
+<div class="modal fade" id="helpModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Ajuda do SADHI</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p class="mb-0">Use o menu lateral para navegar entre as funcionalidades. Os filtros, tabelas e ações desta demonstração são interativos e estão prontos para receber integração com o backend.</p></div><div class="modal-footer"><button class="btn btn-success" data-bs-dismiss="modal">Entendi</button></div></div></div></div>
+<div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="appToast" class="toast"><div class="toast-body"></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="../script.js"></script></body></html>

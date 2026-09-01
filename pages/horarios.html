@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Horários | SADHI</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="../style.css"></head>
+<body><div class="app">
+<aside class="sidebar">
+  <a class="logo" href="dashboard.html">SADHI<small>Sistema de Apoio à<br>Decisão de Horários</small></a>
+  <div class="nav-title">Menu principal</div><nav class="sidebar-nav"><a href="dashboard.html" class=""><i class="bi bi-house-door"></i>Início</a>
+<a href="grade.html" class=""><i class="bi bi-calendar3"></i>Grade Horária</a>
+<a href="horarios.html" class="active"><i class="bi bi-clock-history"></i>Horários</a>
+<a href="disciplinas.html" class=""><i class="bi bi-book"></i>Disciplinas</a>
+<a href="turmas.html" class=""><i class="bi bi-people"></i>Turmas</a>
+<a href="historico.html" class=""><i class="bi bi-bar-chart"></i>Relatórios</a></nav>
+  <a class="logout" href="../index.html"><i class="bi bi-box-arrow-left"></i>Sair</a>
+</aside>
+<main class="main"><header class="topbar">
+  <span class="campus"><i class="bi bi-building me-2"></i>Campus: São Paulo do Potengi</span>
+  <div class="top-actions"><button class="icon-btn" data-bs-toggle="tooltip" title="Notificações"><i class="bi bi-bell"></i></button><button class="icon-btn" data-bs-toggle="modal" data-bs-target="#helpModal" title="Ajuda"><i class="bi bi-question-circle"></i></button><span class="avatar"><i class="bi bi-person"></i></span></div>
+</header><div class="content">
+<div class="page-heading"><div><h1>Consultar Horários</h1><p>Visualize horários de professores, turmas, disciplinas ou dependências.</p></div><div class="semester"><small>Semestre atual</small><strong>2026.1</strong></div></div>
+<div class="filters"><div class="row g-3 align-items-end"><div class="col-md-3"><label>Visualizar por</label><select id="viewBy" class="form-select"><option>Professor</option><option>Turma</option><option>Disciplina</option><option>Dependência</option></select></div><div class="col-md-3"><label>Curso</label><select class="form-select"><option>Informática</option><option>Administração</option></select></div><div class="col-md-2"><label>Dia</label><select class="form-select"><option>Todos</option><option>Segunda-feira</option><option>Terça-feira</option></select></div><div class="col-md-2"><label>Turma</label><select class="form-select"><option>Todos</option><option>INFO 14 M</option></select></div><div class="col-md-2 d-flex gap-2"><button id="clearSchedule" class="btn btn-outline-secondary flex-fill" title="Limpar"><i class="bi bi-arrow-counterclockwise"></i></button><button id="searchSchedule" class="btn btn-success flex-fill" title="Buscar"><i class="bi bi-search"></i></button></div></div></div>
+<div class="schedule-tabs"><button class="active" data-tab="pessoas">Horário das Pessoas</button><button data-tab="turmas">Horário de Turmas</button><button data-tab="disciplinas">Horário das Disciplinas</button><button data-tab="dependencias">Horário das Dependências</button></div>
+<div class="d-flex justify-content-between align-items-center py-3"><div><strong id="scheduleTitle">Alison Costa</strong><div class="text-secondary small">Grade semanal · 2026.1</div></div><button id="printSchedule" class="btn btn-outline-secondary btn-sm"><i class="bi bi-printer me-1"></i>Imprimir</button></div>
+<div class="schedule-wrap"><table class="schedule-table"><thead><tr><th>Horário</th><th>Segunda-feira</th><th>Terça-feira</th><th>Quarta-feira</th><th>Quinta-feira</th><th>Sexta-feira</th></tr></thead><tbody>
+<tr><th>07:00 - 07:45</th><td></td><td></td><td></td><td></td><td class="class green-class">INF NET<small>CPR 14 M</small></td></tr>
+<tr><th>07:45 - 08:30</th><td></td><td></td><td></td><td></td><td class="class green-class">INF NET<small>CPR 14 M</small></td></tr>
+<tr><th>08:30 - 09:15</th><td></td><td></td><td></td><td></td><td class="class orange-class">INF NET<small>CPR 14 M</small></td></tr>
+<tr><th>09:15 - 10:00</th><td></td><td></td><td></td><td></td><td class="class orange-class">INF NET<small>CPR 14 M</small></td></tr>
+<tr><th>10:00 - 10:45</th><td></td><td></td><td></td><td></td><td></td></tr><tr><th>10:45 - 11:30</th><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="period"><th colspan="6">Tarde</th></tr>
+<tr><th>13:00 - 13:45</th><td></td><td class="class blue-class">INF NET<small>LAB 01</small></td><td></td><td></td><td></td></tr>
+<tr><th>13:45 - 14:30</th><td></td><td class="class blue-class">INF NET<small>LAB 01</small></td><td></td><td></td><td></td></tr>
+<tr><th>14:30 - 15:15</th><td></td><td></td><td></td><td class="class purple-class">INF NET<small>LAB 02</small></td><td></td></tr>
+<tr><th>15:15 - 16:00</th><td></td><td></td><td></td><td class="class purple-class">INF NET<small>LAB 02</small></td><td></td></tr>
+<tr class="period"><th colspan="6">Noite</th></tr>
+<tr><th>19:00 - 19:45</th><td></td><td class="class blue-class">INF NET<small>LAB 01</small></td><td></td><td></td><td></td></tr>
+<tr><th>19:45 - 20:30</th><td></td><td class="class blue-class">INF NET<small>LAB 01</small></td><td></td><td></td><td></td></tr>
+<tr><th>20:30 - 21:15</th><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody></table></div>
+</div></main></div>
+<div class="modal fade" id="helpModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Ajuda do SADHI</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p class="mb-0">Use o menu lateral para navegar entre as funcionalidades. Os filtros, tabelas e ações desta demonstração são interativos e estão prontos para receber integração com o backend.</p></div><div class="modal-footer"><button class="btn btn-success" data-bs-dismiss="modal">Entendi</button></div></div></div></div>
+<div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="appToast" class="toast"><div class="toast-body"></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="../script.js"></script></body></html>
